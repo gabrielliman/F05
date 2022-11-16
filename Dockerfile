@@ -18,7 +18,6 @@ RUN npm install difflib
 RUN pip install bs4 lxml
 RUN apt-get install -y poppler-utils
 RUN pip install dateparser
-RUN apt-get install -y tmux
 RUN pip install fastapi
 RUN pip install "uvicorn[standard]"
 RUN pip install python-multipart
