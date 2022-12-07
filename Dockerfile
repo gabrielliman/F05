@@ -23,3 +23,7 @@ RUN pip install "uvicorn[standard]"
 RUN pip install python-multipart
 
 RUN wget https://github.com/MPMG-DCC-UFMG/F05/archive/refs/heads/master.zip && unzip master.zip
+
+RUN cd F05-master
+EXPOSE 8000
+CMD ["uvicorn", "api:app", "--host:0.0.0.0", "--reload"]
