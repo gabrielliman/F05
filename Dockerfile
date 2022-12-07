@@ -24,4 +24,4 @@ RUN pip install python-multipart
 
 RUN wget https://github.com/MPMG-DCC-UFMG/F05/archive/refs/heads/master.zip && unzip master.zip
 
-CMD ["uvicorn", "F05-master.api:app", "--host=127.0.0.1", "--port=15000", "--reload"]
+CMD ["uvicorn", "F05-master.api:app", "--host=127.0.0.1", "--network host", "--port=15000", "--reload"]
